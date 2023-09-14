@@ -4,19 +4,109 @@
     border: 0px;
 }
 
-.bg{
+.p-nav-btn{
+    position: fixed;
+    background-color: rgba(35, 35, 35, 1);
+
+    padding: 20px;
+    border-radius: 5px;
+
+    left: 5px;
+
+    bottom: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    z-index: 100000;
+
+    cursor: pointer;
+}
+
+.p-nav-btn i {
+    color: white;
+    font-size: 25px;
+}
+
+.p-nav{
     position: fixed;
 
-    width: 100%;
-    height: 100vh;
+    height: 100%;
+    width: 75vw;
+    background-color: rgb(35,35,35);
 
-    filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-    background-image: linear-gradient(45deg, rgba(19, 184, 157, 0.5), rgba(255, 255, 255, 0.25)), url('img/bg/bg2.jpg');
-    background-position: center;
-    background-size: cover;
+.p-nav ul{
+    list-style: none;
 
-    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding-top: 30px;
+
+    padding-left: 25px;
+}
+
+.p-nav ul li{
+
+}
+
+.p-nav ul li a{
+    color: white;
+    text-decoration: none;
+
+    display: flex;
+    gap: 5px;
+    
+    font-size: 30px;
+
+    align-items: center;
+}
+
+.p-nav ul li a i{
+    font-size: 20px;
+}
+
+.p-nav ul li a p {
+    text-transform: capitalize;
+}
+
+.p-nav ul:nth-child(2){
+    display: flex ;
+    flex-direction: row;
+    gap: 15px;
+
+    padding-top: 0px;
+
+}
+
+.p-nav ul:nth-child(2) li i{
+    color: rgba(0, 0, 0, 1);
+    background-color: white;
+
+    font-size: 25px;
+
+    padding: 15px;
+    border-radius: 50%;
+
+    width: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+
+.nav-phone-deactive{
+    display: none;
 }
 
 nav{
@@ -32,6 +122,15 @@ nav{
     background-color: rgba(255, 0, 0, 0);
 
     z-index: 10000;
+
+    transition: .5s;
+}
+
+.stickyNav{
+    background-color: rgb(25,25,25);
+
+    border-bottom: 1px solid var(--secondary-color);
+    height: 60px;
 }
 
 nav section{
@@ -116,16 +215,23 @@ nav section ul li a i{
 
 .unu{
     width: 100%;
-    height: 55vh;
+    height: 75vh;
 
     background-image: linear-gradient(rgba(207, 216, 157, 0.432) 50%, rgba(95, 184, 102, 1)), url("img/bg/bg2.jpg");
-    background-size: cover;
+    background-size: 120%;
+
     background-position-y: center;
     background-position-x: center;
 
     display: flex;
     align-items: flex-end;
     justify-content: center;
+
+    transition: .5s;
+}
+
+.stickyUnu{
+    background-size: 100%;
 }
 
 .unu h1{
@@ -148,7 +254,7 @@ nav section ul li a i{
 
 .doi h1{
     color: white;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-align: center;
 
     font-size: 35px;
@@ -167,11 +273,15 @@ nav section ul li a i{
     gap: 25px;
 
     padding: 50px 0px;
+
+    background-color: rgb(35,35,35);
 }
 
 .trei ul{
     display: flex;
     flex-direction: column;
+
+    list-style: none;
 
     gap: 25px;
 }
@@ -186,6 +296,12 @@ nav section ul li a i{
     background-image: url("img/s/s1.jpg");
 }
 
+@media (min-width: 900px){
+    .p-nav-btn{
+        display: none;
+    }
+}
+
 @media (max-width: 900px){
 
     nav{
@@ -197,16 +313,17 @@ nav section ul li a i{
     }
 
     .unu{
-        height: 25vh;
-        background-size: 200%;
+        height: 45vh;
+        background-size: 400%;
 
         background-image: linear-gradient(rgba(207, 216, 157, 0.432) 30%, rgba(95, 184, 102, 1)), url("img/bg/bg2.jpg");
     }
-
-    
     
     .unu h1{
-        font-size: 8vw;
+        font-size: 16vw;
+        line-height: 50px;
+
+        text-align: center;
 
         text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
 
@@ -222,7 +339,7 @@ nav section ul li a i{
     }
 
     .trei ul{
-        width: 100%;
+        width: 95%;
     }
 
     .trei ul li{

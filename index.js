@@ -1,16 +1,23 @@
+var phoneNav = document.querySelector('.p-nav');
+var menuAct = 0;
+menuBtnToggle()
 
-function ViewModeButton(name){
-    let btn = document.getElementsByClassName(name)[0];
+function menuBtnToggle(){
 
-    if(btn.id == 'selected')
-        return;
-
-    document.getElementsByClassName('bt1')[0].setAttribute('id', '');
-    document.getElementsByClassName('bt2')[0].setAttribute('id', '');
-    document.getElementsByClassName('bt3')[0].setAttribute('id', '');
-
-    if(btn.id == ""){
-        btn.setAttribute('id', 'selected');
+    if(menuAct == 0){
+        menuAct = 1;
+        phoneNav.classList.toggle('nav-phone-deactive', true);
+    }
+    else{
+        menuAct = 0;
+        phoneNav.classList.toggle('nav-phone-deactive', false);
     }
 }
 
+window.addEventListener('scroll', function(){
+    var navbar = document.querySelector('nav');
+    navbar.classList.toggle('stickyNav', window.scrollY);
+
+    var bg = document.querySelector('.unu');
+    bg.classList.toggle('stickyUnu', window.scrollY);
+})

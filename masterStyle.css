@@ -11,6 +11,14 @@
     font-family: "Abhaya Libre",sans-serif;
 
     user-select: none;
+
+    scroll-behavior: smooth;
+
+    --secondary-color: rgba(95, 184, 102, 1);
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
 
 
