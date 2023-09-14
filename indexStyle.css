@@ -143,7 +143,7 @@ nav section ul li a i{
     width: 100%;
     height: min-content;
 
-    background-color: rgb(95, 184, 102);
+    background-color: rgba(95, 184, 102, 1)
 }
 
 .doi h1{
@@ -199,7 +199,11 @@ nav section ul li a i{
     .unu{
         height: 25vh;
         background-size: 200%;
+
+        background-image: linear-gradient(rgba(207, 216, 157, 0.432) 30%, rgba(95, 184, 102, 1)), url("img/bg/bg2.jpg");
     }
+
+    
     
     .unu h1{
         font-size: 8vw;
