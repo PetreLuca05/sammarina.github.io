@@ -300,15 +300,23 @@ nav section ul li a i{
 
 .patru{
     width: 100%;
-    height: 100vh;
+    height: min-content;
 
     display: flex;
     justify-content: center;
+
+    border-bottom: 1px solid var(--secondary-color);
 }
 
 .patru ul{
     height: 100%;
-    width: 60%;
+    width: 85%;
+
+    padding: 100px 0px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .patru ul li{
@@ -322,7 +330,7 @@ nav section ul li a i{
     font-size: 55px;
     font-weight: 800;
 
-    padding-top: 100px;
+    line-height: 90%;
 }
 
 .patru p{
@@ -330,6 +338,18 @@ nav section ul li a i{
 
     font-size: 25px;
     font-weight: 500;
+
+    line-height: 95%;
+}
+
+.cinci{
+    width: 100%;
+    height: min-content;
+}
+
+.cinci iframe{
+    width: 100%;
+    height: 500px;
 }
 
 @media (min-width: 900px){
@@ -381,5 +401,26 @@ nav section ul li a i{
     .trei ul li{
         width: 100%;
         height: 50vw;
+    }
+
+    .patru{
+        height: min-content;
+        background-position-x: -1750px;
+    }
+
+    
+    .patru ul{
+        height: 100%;
+        width: 90%;
+        padding: 0px;
+        padding-bottom: 25px;
+    }
+
+    .patru h1{
+        color: white;
+        font-size: 55px;
+        font-weight: 800;
+    
+        padding-top: 20px;
     }
 }
