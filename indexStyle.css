@@ -217,7 +217,7 @@ nav section ul li a i{
     width: 100%;
     height: 75vh;
 
-    background-image: linear-gradient(rgba(207, 216, 157, 0.432) 50%, rgba(95, 184, 102, 1)), url("img/bg/bg2.jpg");
+    background-image: linear-gradient(rgba(207, 216, 157, 0.432) 50%, var(--secondary-color)), url("img/bg/bg2.jpg");
     background-size: 120%;
 
     background-position-y: center;
@@ -249,7 +249,7 @@ nav section ul li a i{
     width: 100%;
     height: min-content;
 
-    background-color: rgba(95, 184, 102, 1)
+    background-color: var(--secondary-color)
 }
 
 .doi h1{
@@ -275,6 +275,8 @@ nav section ul li a i{
     padding: 50px 0px;
 
     background-color: rgb(35,35,35);
+
+    border-bottom: 1px solid var(--secondary-color);
 }
 
 .trei ul{
@@ -294,6 +296,40 @@ nav section ul li a i{
     background-position-x: center;
 
     background-image: url("img/s/s1.jpg");
+}
+
+.patru{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+.patru ul{
+    height: 100%;
+    width: 60%;
+}
+
+.patru ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.patru h1{
+    color: white;
+    font-size: 55px;
+    font-weight: 800;
+
+    padding-top: 100px;
+}
+
+.patru p{
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 25px;
+    font-weight: 500;
 }
 
 @media (min-width: 900px){
