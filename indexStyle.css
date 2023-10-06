@@ -265,14 +265,11 @@ nav section ul li a i{
 
 .trei{
     width: 100%;
-    height: min-content;
-
+    height: 100vh;
+    
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 25px;
-
-    padding: 50px 0px;
+    align-items: center;
 
     background-color: rgb(35,35,35);
 
@@ -280,58 +277,62 @@ nav section ul li a i{
 }
 
 .trei ul{
-    display: flex;
-    flex-direction: column;
+    width: 98%;
+    height: 96%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 33.4%);
+    grid-template-rows: 33.4%;
+
+    gap: 10px;
 
     list-style: none;
 
-    gap: 25px;
+    overflow-x: hidden;
 }
 
 .trei ul li{
-    width: 500px;
-    height: 400px;
-
     background-size: cover;
-    background-position-x: center;
+
+    background-position: center;
 
     background-image: url("img/s/s1.jpg");
 }
 
-.trei ul:nth-child(1) li:nth-child(1){
-    background-image: url(https://www.24real.ro/images/propertiessite/img_1056_14940.jpg);
+.trei ul li:nth-child(1){
+    
 }
 
-.trei ul:nth-child(1) li:nth-child(2){
-    background-image: url(https://img3.imonet.ro/X7S0/7S004KVTC90/spatiu-comercial-de-inchiriat-bucuresti-titulescu-162393098_600x400.jpg);
+.trei ul li:nth-child(2){
+    background-image: url(https://www.eproprietar.ro/storage/2212/spatiu-comercial-birouri-la-artera-principala-1.jpg);
 }
 
-.trei ul:nth-child(1) li:nth-child(3){
-    background-image: url(https://www.galaxyimob.ro/images/propertiessite/img_360512_4156586.jpg);
+.trei ul li:nth-child(3){
+    background-image: url(https://frankfurt.apollo.olxcdn.com/v1/files/facjwp1guak22-RO/image;s=1894x1536);
 }
 
-.trei ul:nth-child(2) li:nth-child(1){
-    background-image: url(https://img3.imonet.ro/XB39/B3904K9NNPB/spatiu-comercial-de-inchiriat-bucuresti-ilfov-bucuresti-143381630.jpg);
+.trei ul li:nth-child(4){
+    background-image: url(https://www.inchirieri.ro/images/anunturi/n-Tomis-Nord-spatiu-comercial-400mp-inchirieri-Constanta-18744.jpg);
 }
 
-.trei ul:nth-child(2) li:nth-child(2){
-    background-image: url(https://www.vdi.ro/images/propertiessmall/426397/img-4263970.jpg);
+.trei ul li:nth-child(5){
+    background-image: url(https://imobiliare.topestate.ro/images/oferte/constanta/spatii-comerciale/231184/thumb/medium_inchiriere-spatiu-comercial-160-mp-2-camere-constanta-trocadero-accessrealestate-231184-0-50.jpg);
 }
 
-.trei ul:nth-child(2) li:nth-child(3){
-    background-image: url(https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6Imk3eWk0ZDczZGozby1BUk8iLCJ3IjpbeyJmbiI6Im8xemN3cmR4dDZ4bi1BUk8iLCJzIjoiMTQiLCJwIjoiMTAsLTEwIiwiYSI6IjAifV19.LA0_T3oRdjhjfRd5yMFQHdEZBJPZDZt8ib4ipEFyouk/image;s=1280x1024;q=80);
+.trei ul li:nth-child(6){
+    background-image: url(https://meridiusintermed.ro/oferte/302/xlp__spatiu-comercial-1-camera-de-inchiriat-trocadero-constanta_620a134979dc58.jpg);
 }
 
-.trei ul:nth-child(3) li:nth-child(1){
-    background-image: url(https://www.uilcasa.ro/pictures/10168cLv32524-IMG_2073_large.JPG);
+.trei ul li:nth-child(7){
+    background-image: url(https://media2.homezz.ro/media/j/api_list/5/343/3433225_centru-spatiu-comercial-293mp-cu-vitrina-stradala-pe-colt_2.jpg);
 }
 
-.trei ul:nth-child(3) li:nth-child(2){
-    background-image: url(https://www.domimobiliare.ro/wp-content/uploads/2020/05/IMG_3088-1000x630.jpg);
+.trei ul li:nth-child(8){
+    background-image: url(https://frankfurt.apollo.olxcdn.com/v1/files/lsvwx0ptz91c-RO/image;s=750x421);
 }
 
-.trei ul:nth-child(3) li:nth-child(3){
-  
+.trei ul li:nth-child(9){
+    background-image: url(https://imobiliare.topestate.ro/images/oferte/constanta/spatii-comerciale/204676/thumb/medium_spatiu-comercial-vanzare-480-mp-constanta-centru-popamarcela-204676-0-110.jpg);
 }
 
 
@@ -350,6 +351,7 @@ nav section ul li a i{
     width: 85%;
 
     padding: 100px 0px;
+    padding-top: 50px;
 
     display: flex;
     flex-direction: column;
@@ -364,7 +366,7 @@ nav section ul li a i{
 
 .patru h1{
     color: white;
-    font-size: 55px;
+    font-size: 75px;
     font-weight: 800;
 
     line-height: 90%;
@@ -435,10 +437,6 @@ nav section ul li a i{
         display: none;
     }
 
-    .trei ul:nth-child(2), .trei ul:nth-child(3){
-        display: none;
-    }
-
     .unu{
         height: 45vh;
         background-size: 400%;
@@ -462,17 +460,46 @@ nav section ul li a i{
     }
 
     .trei{
-        padding: 25px 0px;
-    }
-
-    .trei ul{
-        width: 95%;
-    }
-
-    .trei ul li{
         width: 100%;
-        height: 50vw;
+        height: 75vh;
+        
+        display: flex;
+        justify-content: center;
+    
+        background-color: rgb(35,35,35);
+    
+        border-bottom: 1px solid var(--secondary-color);
     }
+    
+    .trei ul{
+        width: 100%;
+        height: 100%;
+    
+        display: flex;
+        list-style: none;
+
+        align-items: center;
+    
+        overflow-x: scroll;
+        overflow-y: hidden;
+    
+        scroll-snap-type: x mandatory;
+    }
+    
+    .trei ul li{
+        width: 100vw;
+        height: 100vh;
+        flex-shrink: 0;
+    
+        background-size: contain;
+        scroll-snap-align: start;
+
+        background-position: center;
+        background-repeat: no-repeat;
+    
+        background-image: url("img/s/s1.jpg");
+    }
+
 
     .patru{
         height: min-content;
@@ -493,5 +520,19 @@ nav section ul li a i{
         font-weight: 800;
     
         padding-top: 20px;
+    }
+
+    .sase{
+        width: 100%;
+        height: 45vh;
+    }
+    
+    .sase h1{
+        font-size: 45px;
+    }
+    
+    .sase a{
+        font-size: 25px;
+        padding: 10px 50px;
     }
 }
