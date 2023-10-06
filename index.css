@@ -1,217 +1,3 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-}
-
-.p-nav-btn{
-    position: fixed;
-    background-color: rgba(35, 35, 35, 1);
-
-    padding: 20px;
-    border-radius: 5px;
-
-    left: 5px;
-
-    bottom: 5px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    z-index: 100000;
-
-    cursor: pointer;
-}
-
-.p-nav-btn i {
-    color: white;
-    font-size: 25px;
-}
-
-.p-nav{
-    position: fixed;
-
-    height: 100%;
-    width: 75vw;
-    background-color: rgb(35,35,35);
-
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.p-nav ul{
-    list-style: none;
-
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    padding-top: 30px;
-
-    padding-left: 25px;
-}
-
-.p-nav ul li{
-
-}
-
-.p-nav ul li a{
-    color: white;
-    text-decoration: none;
-
-    display: flex;
-    gap: 5px;
-    
-    font-size: 30px;
-
-    align-items: center;
-}
-
-.p-nav ul li a i{
-    font-size: 20px;
-}
-
-.p-nav ul li a p {
-    text-transform: capitalize;
-}
-
-.p-nav ul:nth-child(2){
-    display: flex ;
-    flex-direction: row;
-    gap: 15px;
-
-    padding-top: 0px;
-
-}
-
-.p-nav ul:nth-child(2) li i{
-    color: rgba(0, 0, 0, 1);
-    background-color: white;
-
-    font-size: 25px;
-
-    padding: 15px;
-    border-radius: 50%;
-
-    width: 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-}
-
-
-.nav-phone-deactive{
-    display: none;
-}
-
-nav{
-    position: fixed;
-
-    width: 100%;
-    height: 180px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: rgba(255, 0, 0, 0);
-
-    z-index: 10000;
-
-    transition: .5s;
-}
-
-.stickyNav{
-    background-color: rgb(25,25,25);
-
-    border-bottom: 1px solid var(--secondary-color);
-    height: 60px;
-}
-
-nav section{
-    width: 98%;
-    height: 100%;
-
-    background-color: rgba(0, 128, 0, 0);
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav section div{
-    
-    height: 100%;
-    width: 500px;
-
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-nav section ul{
-    list-style: none;
-    display: flex;
-    align-items: center;
-}
-
-nav section ul li{
-
-    padding-left: 25px;
-
-}
-
-nav section ul li:nth-child(7){
-    padding: 10px;
-}
-
-nav section ul li a{
-    text-decoration: none;
-
-    display: flex;
-    align-items: center;
-
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
-
-    transition: 1s;
-}
-
-nav section ul li a p{
-    color: rgba(255, 255, 255, 1);
-
-    font-size: 20px;
-    text-transform: capitalize;
-
-    font-weight: 900;
-}
-
-nav section ul li a i{
-    color: rgba(255, 255, 255, 1);
-    padding-left: 5px;
-}
-
-#social{
-    color: rgba(0, 0, 0, 1);
-    background-color: white;
-
-    font-size: 15px;
-
-    padding: 10px;
-    border-radius: 50%;
-
-    width: 15px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-}
 
 .unu{
     width: 100%;
@@ -425,17 +211,7 @@ nav section ul li a i{
     padding: 10px 50px;
 }
 
-@media (min-width: 900px){
-    .p-nav-btn{
-        display: none;
-    }
-}
-
 @media (max-width: 900px){
-
-    nav{
-        display: none;
-    }
 
     .unu{
         height: 45vh;
@@ -516,10 +292,14 @@ nav section ul li a i{
 
     .patru h1{
         color: white;
-        font-size: 55px;
+        font-size: 50px;
         font-weight: 800;
     
         padding-top: 20px;
+    }
+
+    .patru p{
+        font-size: 20px;
     }
 
     .sase{
