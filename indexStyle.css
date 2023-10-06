@@ -298,6 +298,43 @@ nav section ul li a i{
     background-image: url("img/s/s1.jpg");
 }
 
+.trei ul:nth-child(1) li:nth-child(1){
+    background-image: url(https://www.24real.ro/images/propertiessite/img_1056_14940.jpg);
+}
+
+.trei ul:nth-child(1) li:nth-child(2){
+    background-image: url(https://img3.imonet.ro/X7S0/7S004KVTC90/spatiu-comercial-de-inchiriat-bucuresti-titulescu-162393098_600x400.jpg);
+}
+
+.trei ul:nth-child(1) li:nth-child(3){
+    background-image: url(https://www.galaxyimob.ro/images/propertiessite/img_360512_4156586.jpg);
+}
+
+.trei ul:nth-child(2) li:nth-child(1){
+    background-image: url(https://img3.imonet.ro/XB39/B3904K9NNPB/spatiu-comercial-de-inchiriat-bucuresti-ilfov-bucuresti-143381630.jpg);
+}
+
+.trei ul:nth-child(2) li:nth-child(2){
+    background-image: url(https://www.vdi.ro/images/propertiessmall/426397/img-4263970.jpg);
+}
+
+.trei ul:nth-child(2) li:nth-child(3){
+    background-image: url(https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6Imk3eWk0ZDczZGozby1BUk8iLCJ3IjpbeyJmbiI6Im8xemN3cmR4dDZ4bi1BUk8iLCJzIjoiMTQiLCJwIjoiMTAsLTEwIiwiYSI6IjAifV19.LA0_T3oRdjhjfRd5yMFQHdEZBJPZDZt8ib4ipEFyouk/image;s=1280x1024;q=80);
+}
+
+.trei ul:nth-child(3) li:nth-child(1){
+    background-image: url(https://www.uilcasa.ro/pictures/10168cLv32524-IMG_2073_large.JPG);
+}
+
+.trei ul:nth-child(3) li:nth-child(2){
+    background-image: url(https://www.domimobiliare.ro/wp-content/uploads/2020/05/IMG_3088-1000x630.jpg);
+}
+
+.trei ul:nth-child(3) li:nth-child(3){
+  
+}
+
+
 .patru{
     width: 100%;
     height: min-content;
@@ -350,6 +387,40 @@ nav section ul li a i{
 .cinci iframe{
     width: 100%;
     height: 500px;
+}
+
+.sase{
+    width: 100%;
+    height: 15vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(35,35,35);
+
+    border-top: 1px solid var(--secondary-color);
+}
+
+.sase h1{
+    color: white;
+    text-transform: capitalize;
+
+    font-size: 45px;
+}
+
+.sase a{
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+
+    font-size: 25px;
+
+    background-color: var(--secondary-color);
+
+    border-radius: 5px;
+    padding: 10px 50px;
 }
 
 @media (min-width: 900px){
