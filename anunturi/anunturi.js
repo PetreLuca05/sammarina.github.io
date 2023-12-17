@@ -6,20 +6,15 @@ function ElementFromHtml(html){
     return template.content.firstElementChild;
 }
 
-const ul = document.querySelector(".unu");
-const numOfDivs = 9;
+const ul = document.querySelector(".spatii ul");
+const numOfDivs = 19;
 
 for(let i = 0; i < numOfDivs; i++){
     const myList = ElementFromHtml(`
-    <div>
-
-    <section>
-        <h1>strada x numarul y</h1> <i class="fa-solid fa-location-dot"></i>
-    </section>
-
-    <h2>detalii ( mp, suprafata - utila, etc. )</h2>
-
-    </div>
+    <li>
+        <h1>strada x, numarul y</h1>
+        <p>detalii ( mp, suprafata - utila, etc. )</p>
+    </li>   
     `)
 
     ul.appendChild(myList);

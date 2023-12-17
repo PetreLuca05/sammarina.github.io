@@ -132,7 +132,7 @@ header section{
 
 .doi p{
     color: rgba(255, 255, 255, 0.75);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 300;
 
     padding-bottom: 25px;
@@ -141,7 +141,7 @@ header section{
 
 .doi ul{
     color: rgba(255, 255, 255, 0.75);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 300;
 
     padding-left: 45px;
@@ -149,8 +149,8 @@ header section{
 
 .doi ul b{
     color: rgba(255, 255, 255, 1);
-    font-size: 25px;
-    font-weight: 900;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .doi ul li{

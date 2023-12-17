@@ -1,0 +1,139 @@
+body{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.spatii{
+    width: 50%;
+    height: 100%;
+
+    padding: 25px;
+}
+
+.spatii div{
+    display: flex;
+    gap: 5px;
+    background-color: rgba(0,0,0, .5);
+}
+
+.spatii div p {
+    color: white;
+
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+
+    background-color: var(--secondary-color);
+
+    border-radius: 5px;
+    padding: 10px 50px;
+
+    cursor: pointer;
+}
+
+.spatii ul{
+    list-style: none;
+    overflow-y: scroll;
+    height: 90%;
+}
+
+.spatii ul li{
+    padding: 5px 20px;
+    background-color: rgba(0,0,0, .5);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+
+    cursor: pointer;
+}
+
+.spatii ul li h1{
+    color: white;
+    text-transform: capitalize;
+}
+
+.spatii ul li p{
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.vizualizare {
+    width: 50%;
+    height: 100%;
+
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+
+.vizualizare div{
+    width: 100%;
+    height: 50%;
+
+    background-image: url("../img/s/s1.jpg");
+    background-image: linear-gradient(180deg, rgba(165, 0, 187, 0.2), rgba(20, 20, 20, .75)), url("../img/s/s1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (max-width: 768px){
+    body{
+        display: flex;
+        flex-direction: column-reverse;
+        overflow-y: hidden;
+        justify-content: flex-start;
+    }
+
+    .spatii{
+        width: 100%;
+        height: 70%;
+    
+        padding: 0px;
+    
+        background-color: rgba(255, 0, 0, 0);
+    }
+
+    .spatii div{
+        display: flex;
+        overflow-x: scroll;
+        gap: 5px;
+        background-color: rgba(25,25,25, .5);
+
+        padding: 10px 5px;
+    }
+
+    .spatii div p {
+        padding: 10px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    .spatii ul li h1{
+        color: white;
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+    
+    .spatii ul li p{
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 15px;
+    }
+    
+    .vizualizare {
+        width: 100%;
+        height: 30%;
+
+        padding: 0px;
+
+        background-color: rgba(255, 255, 0, 1);;
+    }
+
+    .vizualizare div{
+        width: 100%;
+        height: 100%;
+        
+    }
+
+}
