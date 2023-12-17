@@ -1,23 +1,41 @@
-var phoneNav = document.querySelector('.p-nav');
-var menuAct = 0;
-menuBtnToggle()
+function ElementFromHtml(html){
+    const template = document.createElement("template");
 
-function menuBtnToggle(){
+    template.innerHTML = html.trim();
 
-    if(menuAct == 0){
-        menuAct = 1;
-        phoneNav.classList.toggle('nav-phone-deactive', true);
-    }
-    else{
-        menuAct = 0;
-        phoneNav.classList.toggle('nav-phone-deactive', false);
-    }
+    return template.content.firstElementChild;
 }
 
-window.addEventListener('scroll', function(){
-    var navbar = document.querySelector('nav');
-    navbar.classList.toggle('stickyNav', window.scrollY);
+const myList = ElementFromHtml(`
+<div>
+<section>
+  <h1>strada x numarul y</h1> <i class="fa-solid fa-location-dot"></i>
+</section>
 
-    var bg = document.querySelector('.unu');
-    bg.classList.toggle('stickyUnu', window.scrollY);
-})
+<h2>detalii ( mp, suprafata - utila, etc. )</h2>
+</div>
+`)
+
+//const ul = document.querySelector(".unu");
+//ul.appendChild(myList);
+
+const ul = document.querySelector(".unu");
+const numOfDivs = 9;
+
+for(let i = 0; i < numOfDivs; i++){
+    const myList = ElementFromHtml(`
+    <div>
+
+    <section>
+        <h1>strada x numarul y</h1> <i class="fa-solid fa-location-dot"></i>
+    </section>
+
+    <h2>detalii ( mp, suprafata - utila, etc. )</h2>
+
+    </div>
+    `)
+
+    ul.appendChild(myList);
+}
+
+
