@@ -1,139 +1,128 @@
 body{
-    display: flex;
     width: 100%;
     height: 100vh;
-    overflow-y: hidden;
 }
 
-.spatii{
-    width: 50%;
-    height: 100%;
-
-    padding: 25px;
-}
-
-.spatii div{
-    display: flex;
-    gap: 5px;
-    background-color: rgba(0,0,0, .5);
-}
-
-.spatii div p {
-    color: white;
-
-    text-transform: uppercase;
+.filtre{
     width: 100%;
-    text-align: center;
 
-    background-color: var(--secondary-color);
+    background-color: rgb(15, 15, 15);
+    padding: 5px 10px;
 
-    border-radius: 5px;
-    padding: 10px 50px;
-
-    cursor: pointer;
-}
-
-.spatii ul{
-    list-style: none;
-    overflow-y: scroll;
-    height: 90%;
-}
-
-.spatii ul li{
-    padding: 5px 20px;
-    background-color: rgba(0,0,0, .5);
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-
-    cursor: pointer;
-}
-
-.spatii ul li h1{
-    color: white;
-    text-transform: capitalize;
-}
-
-.spatii ul li p{
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.vizualizare {
-    width: 50%;
-    height: 100%;
-
-    padding: 25px;
     box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    position: fixed;
 }
 
+.filtre p{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
 
-.vizualizare div{
+    text-align: center;
+    text-transform: uppercase;
+
+    padding: 5px 25px;
+    border-radius: 5px;
+    flex-grow: 1;
+
+    cursor: pointer;
+}
+
+.filtre .selected{
+    background-color: var(--secondary-color );
+}
+
+.lista-spatii{
+    padding: 10px 200px;
+    box-sizing: border-box;
+    
+}
+
+.lista-spatii ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    justify-content: center;
+
+    list-style: none;
+}
+
+.lista-spatii ul li{
+    background-color: rgb(35, 35, 35);
+    border-radius: 5px;
+    width: 300px;
+    height: 400px;
+}
+
+.lista-spatii ul li section:nth-child(1){
     width: 100%;
     height: 50%;
 
     background-image: url("../img/s/s1.jpg");
-    background-image: linear-gradient(180deg, rgba(165, 0, 187, 0.2), rgba(20, 20, 20, .75)), url("../img/s/s1.jpg");
     background-size: cover;
     background-position: center;
 }
 
+.lista-spatii ul li section:nth-child(2){
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-spatii ul li h1{
+    color: white;
+    text-transform: capitalize;
+
+    justify-self: start;
+
+    padding: 0px 10px;
+    padding-top: 10px;
+}
+
+.lista-spatii ul li p{
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 300;
+
+    padding: 0px 10px;
+}
+
+.lista-spatii ul li a{
+    text-decoration: none;
+    color: white;
+
+    background-color: var(--secondary-color);
+
+    margin-top: auto;
+    justify-self: end;
+    bottom: 0px;
+    text-align: center;
+
+    text-transform: uppercase;
+
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
 @media only screen and (max-width: 768px){
-    body{
-        display: flex;
-        flex-direction: column-reverse;
-        overflow-y: hidden;
-        justify-content: flex-start;
-    }
 
-    .spatii{
-        width: 100%;
-        height: 70%;
-    
-        padding: 0px;
-    
-        background-color: rgba(255, 0, 0, 0);
-    }
-
-    .spatii div{
-        display: flex;
-        overflow-x: scroll;
-        gap: 5px;
-        background-color: rgba(25,25,25, .5);
-
-        padding: 10px 5px;
-    }
-
-    .spatii div p {
-        padding: 10px 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        white-space: nowrap;
-    }
-
-    .spatii ul li h1{
-        color: white;
-        text-transform: capitalize;
-        font-size: 20px;
-    }
-    
-    .spatii ul li p{
-        color: rgba(255, 255, 255, 0.75);
-        font-size: 15px;
-    }
-    
-    .vizualizare {
-        width: 100%;
-        height: 30%;
-
-        padding: 0px;
-
-        background-color: rgba(255, 255, 0, 1);;
-    }
-
-    .vizualizare div{
-        width: 100%;
-        height: 100%;
+    .lista-spatii{
+        padding: 10px 0px;
+        box-sizing: border-box;
         
+        padding-top: 100px;
     }
 
+    .lista-spatii ul li{
+        background-color: rgb(35, 35, 35);
+        border-radius: 5px;
+        width: 100%;
+        height: 400px;
+    }
 }

@@ -6,14 +6,20 @@ function ElementFromHtml(html){
     return template.content.firstElementChild;
 }
 
-const ul = document.querySelector(".spatii ul");
-const numOfDivs = 19;
+const ul = document.querySelector(".lista-spatii ul");
+const numOfDivs = 100;
 
 for(let i = 0; i < numOfDivs; i++){
     const myList = ElementFromHtml(`
     <li>
-        <h1>strada x, numarul y</h1>
-        <p>detalii ( mp, suprafata - utila, etc. )</p>
+        <section></section>
+
+        <section>
+            <h1>strada x, numarul y</h1>
+            <p>detalii ( mp, suprafata - utila, etc. )</p>
+
+            <a href="">vizualizeaza</a>
+        </section>
     </li>   
     `)
 
