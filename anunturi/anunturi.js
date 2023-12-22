@@ -17,7 +17,7 @@ fetch('spatii.xlsx')
     for(let i = 1; i < rows.length; i++){
         const filter = rows[i][2];
 
-        const imageURL = rows[i][4];
+        const imageURL = rows[i][5];
         const strada = rows[i][0];
         const numar = rows[i][1];
         const detaliiii = rows[i][3];
