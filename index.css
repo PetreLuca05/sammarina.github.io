@@ -100,7 +100,7 @@ header section{
 }
 
 .unu div p{
-    font-weight: 400;
+    font-weight: 300;
     font-size: var(--global-p-size);
 
     color: rgba(255, 255, 255, 0.75);
