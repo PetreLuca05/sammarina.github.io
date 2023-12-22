@@ -66,6 +66,7 @@ header section{
 
     background-image: linear-gradient(180deg, rgba(20, 20, 20, .25) 110px, rgba(20, 20, 20, 1)), url("img/s/s1.jpg");
     background-size: cover;
+    background-position: center;
 
     display: flex;
     flex-direction: column;
