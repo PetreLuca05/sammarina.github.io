@@ -33,7 +33,7 @@ header div{
 
 header div p{
     color: rgba(255, 255, 255, 0.75);
-    font-size: 25px;
+    font-size: var(--global-p-size);
     font-weight: 300;
 
     padding: 5px 0px;
@@ -99,9 +99,9 @@ header section{
     text-transform: capitalize;
 }
 
-.unu div h2{
+.unu div p{
     font-weight: 400;
-    font-size: .9vw;
+    font-size: var(--global-p-size);
 
     color: rgba(255, 255, 255, 0.75);
 }
@@ -132,7 +132,7 @@ header section{
 
 .doi p{
     color: rgba(255, 255, 255, 0.75);
-    font-size: 20px;
+    font-size: var(--global-p-size);
     font-weight: 300;
 
     padding-bottom: 25px;

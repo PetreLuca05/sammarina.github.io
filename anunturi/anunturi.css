@@ -21,6 +21,8 @@ body{
 .filtre p{
     color: white;
     background-color: rgba(255, 255, 255, 0.1);
+    font-size: var(--global-p-size);
+    font-weight: 300;
 
     text-align: center;
     text-transform: uppercase;
@@ -37,7 +39,7 @@ body{
 }
 
 .lista-spatii{
-    padding: 10px 200px;
+    padding: 10px 100px;
     box-sizing: border-box;
     
 }
@@ -56,8 +58,8 @@ body{
 .lista-spatii ul li{
     background-color: rgb(35, 35, 35);
     border-radius: 5px;
-    width: 300px;
-    height: 400px;
+    width: 500px;
+    height: 700px;
 }
 
 .lista-spatii ul li section:nth-child(1){
@@ -76,19 +78,33 @@ body{
     flex-direction: column;
 }
 
-.lista-spatii ul li h1{
-    color: white;
-    text-transform: capitalize;
-
-    justify-self: start;
+.lista-spatii ul li div {
+    display: flex;
+    gap: 10px;
 
     padding: 0px 10px;
     padding-top: 10px;
 }
 
+.lista-spatii ul li div h1{
+    color: white;
+    text-transform: capitalize;
+
+    justify-self: start;
+    font-size: 30px;
+}
+
+.lista-spatii ul li div i{
+    font-size: 30px;
+
+    color: white;
+    text-transform: capitalize;
+}
+
 .lista-spatii ul li p{
     color: rgba(255, 255, 255, 0.75);
     font-weight: 300;
+    font-size: var(--global-p-size);
 
     padding: 0px 10px;
 }
@@ -108,6 +124,8 @@ body{
 
     padding: 10px 20px;
     border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
 @media only screen and (max-width: 768px){

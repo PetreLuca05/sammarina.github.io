@@ -17,7 +17,7 @@ for(let i = 0; i < numOfDivs; i++){
         <h1>strada x numarul y</h1> <i class="fa-solid fa-location-dot"></i>
     </section>
 
-    <h2>detalii ( mp, suprafata - utila, etc. )</h2>
+    <p>detalii ( mp, suprafata - utila, etc. )</p>
 
     </div>
     `)

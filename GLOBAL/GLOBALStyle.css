@@ -16,6 +16,8 @@
 
     --secondary-color: rgba(95, 184, 102, 1);
     --secondary-color: rebeccapurple;
+
+    --global-p-size: 20px;
 }
 
 html{

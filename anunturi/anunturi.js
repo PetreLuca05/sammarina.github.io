@@ -8,7 +8,46 @@ function ElementFromHtml(html){
 }
 
 const ul = document.querySelector(".lista-spatii ul");
-const numOfDivs = 100;
+fetch('spatii.xlsx')
+  .then(response => response.blob())
+  .then(blob => readXlsxFile(blob))
+  .then((rows) => {
+    for(let i = 1; i < rows.length; i++){
+        const filter = 'mamaia';
+
+        const imageURL = '../img/s/s2.jpg';
+        const strada = rows[i][0];
+        const numar = rows[i][1];
+        const detaliiii = rows[i][3];
+    
+        const myList = ElementFromHtml(`
+
+        <li data-filter = "${filter}">
+        <section style="background-image: url(${imageURL});"></section>
+
+        <section>
+
+            <div>
+                <h1>strada ${strada}, numarul ${numar}</h1>
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <p>${detaliiii}</p>
+            <a href="">vizualizeaza</a>
+
+        </section>
+        </li>  
+        
+        `)
+    
+        ul.appendChild(myList);
+
+    }
+  })
+
+
+/*
+const numOfDivs = 10;
 
 for(let i = 0; i < numOfDivs; i++){
 
@@ -23,7 +62,10 @@ for(let i = 0; i < numOfDivs; i++){
         <section style="background-image: url(${imageURL});"></section>
 
         <section>
-            <h1>strada ${strada}, numarul ${numar}</h1>
+            <div>
+                <h1>strada ${strada}, numarul ${numar}</h1>
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
             <p>${detaliiii}</p>
 
             <a href="">vizualizeaza</a>
@@ -33,11 +75,17 @@ for(let i = 0; i < numOfDivs; i++){
 
     ul.appendChild(myList);
 }
+*/
 
-const liItem = document.querySelectorAll(".filtre p");
-const imgItem = document.querySelectorAll(".lista-spatii ul li");
 
-liItem.forEach(li => {
+setTimeout(test, 1000)
+function test(){
+    const imgItem = document.querySelectorAll(".lista-spatii ul li");
+    alert(imgItem.length);
+
+    const liItem = document.querySelectorAll(".filtre p");
+
+    liItem.forEach(li => {
     li.onclick = function() {
         //active
         liItem.forEach(li => {
@@ -56,6 +104,4 @@ liItem.forEach(li => {
         })
     }
 })
-
-//let workbook = XLSX.read(await (await fetch("spatii.xlsx")).arrayBuffer());
-//console.log(workbook);
+}
