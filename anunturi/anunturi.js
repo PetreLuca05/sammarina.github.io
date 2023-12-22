@@ -103,14 +103,21 @@ function test(){
                 img.style.display = "block";
             }
         })
+
+    }
+
+    liItem[0].onclick = function(){
+
+        liItem.forEach(li => {
+            li.className = "";
+        })
+
+        liItem[0].className = "selected"
+        imgItem.forEach(img => {
+            img.style.display = "block";
+        })
     }
 })
-}
-
-function resetAllFilters(){
-    imgItem.forEach(img => {
-        img.style.display = "block";
-    })
 }
 
 
