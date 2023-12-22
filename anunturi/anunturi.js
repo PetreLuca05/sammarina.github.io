@@ -24,21 +24,19 @@ fetch('spatii.xlsx')
     
         const myList = ElementFromHtml(`
 
-        <li data-filter = "${filter}">
-        <section style="background-image: url(${imageURL});"></section>
-
-        <section>
-
+        <li data-filter = "${filter}" class="spatiu-listItem" 
+        style = " background-image: linear-gradient(180deg, rgba(20, 20, 20, .25) 50px, rgba(20, 20, 20, 1)), url(${imageURL});">
+        
+          <section>
             <div>
-                <h1>strada ${strada}, numarul ${numar}</h1>
-                <i class="fa-solid fa-location-dot"></i>
+                <h1>strada ${strada}, numarul ${numar} <i class="fa-solid fa-location-dot"></i></h1>
             </div>
 
             <p>${detaliiii}</p>
-            <a href="">vizualizeaza</a>
+          </section>
 
-        </section>
-        </li>  
+          <a href="">vizualizeaza</a>
+        </li>   
         
         `)
     
@@ -48,7 +46,9 @@ fetch('spatii.xlsx')
   })
 }
 
+
 /*
+const ul = document.querySelector(".lista-spatii ul");
 const numOfDivs = 10;
 
 for(let i = 0; i < numOfDivs; i++){
@@ -60,24 +60,26 @@ for(let i = 0; i < numOfDivs; i++){
     const detaliiii = 'detalii legate de spatiu ( mp, suprafata - utila, etc)'
 
     const myList = ElementFromHtml(`
-    <li data-filter = "${filter}">
-        <section style="background-image: url(${imageURL});"></section>
 
-        <section>
+    <li data-filter = "${filter}" class="spatiu-listItem" 
+        style = " background-image: linear-gradient(180deg, rgba(20, 20, 20, .25) 110px, rgba(20, 20, 20, 1)), url(${imageURL});">
+
+          <section>
             <div>
-                <h1>strada ${strada}, numarul ${numar}</h1>
-                <i class="fa-solid fa-location-dot"></i>
+                <h1>strada ${strada}, numarul ${numar} <i class="fa-solid fa-location-dot"></i></h1>
             </div>
-            <p>${detaliiii}</p>
 
-            <a href="">vizualizeaza</a>
-        </section>
-    </li>   
+            <p>${detaliiii}</p>
+          </section>
+
+          <a href="">vizualizeaza</a>
+    </li>  
     `)
 
     ul.appendChild(myList);
 }
 */
+
 
 
 setTimeout(test, 1000)
@@ -100,7 +102,7 @@ function test(){
             //console.log(value);
     
             if(img.getAttribute("data-filter") == value.toLocaleLowerCase()){
-                img.style.display = "block";
+                img.style.display = "flex";
             }
         })
 
@@ -114,7 +116,7 @@ function test(){
 
         liItem[0].className = "selected"
         imgItem.forEach(img => {
-            img.style.display = "block";
+            img.style.display = "flex";
         })
     }
 })

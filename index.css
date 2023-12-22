@@ -223,7 +223,7 @@ header section{
     }
     
     header div p{
-        font-size: 20px;
+        font-size: var(--gloabal-p-size-phone);
     }
 
     .unu{
@@ -253,15 +253,15 @@ header section{
     }
 
     .unu div section h1{
-        font-size: 8vw;
+        font-size: 30px;
     }
 
     .unu div section i{
-        font-size: 8vw;
+        font-size: 30px;
     }
 
-    .unu div h2{
-        font-size: 4vw;
+    .unu div p{
+        font-size: var(--gloabal-p-size-phone);
     }
 
     .doi{
@@ -276,10 +276,10 @@ header section{
     
     .doi p{
         color: rgba(255, 255, 255, 0.75);
-        font-size: 20px;
+        font-size: var(--gloabal-p-size-phone);
         font-weight: 300;
     
-        padding-bottom: 25px;
+        padding-bottom: 10px;
         padding-left: 0px;
     }
 
@@ -287,9 +287,15 @@ header section{
         font-size: 20px;
         padding-left: 25px;
     }
+
+    .doi ul li{
+        font-size: var(--gloabal-p-size-phone);
+        padding-left: 0px;
+        padding-bottom: 0px;
+    }
     
     .doi ul b{
-        font-size: 20px;
+        font-size: var(--gloabal-p-size-phone);
         font-weight: 900;
     }
 

@@ -18,6 +18,8 @@
     --secondary-color: rebeccapurple;
 
     --global-p-size: 20px;
+
+    --gloabal-p-size-phone: 15px;
 }
 
 html{

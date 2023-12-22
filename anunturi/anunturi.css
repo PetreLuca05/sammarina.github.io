@@ -39,9 +39,8 @@ body{
 }
 
 .lista-spatii{
-    padding: 10px 100px;
+    padding: 50px 100px;
     box-sizing: border-box;
-    
 }
 
 .lista-spatii ul{
@@ -55,80 +54,72 @@ body{
     list-style: none;
 }
 
-.lista-spatii ul li{
-    background-color: rgb(35, 35, 35);
-    border-radius: 5px;
-    width: 500px;
-    height: 700px;
-}
+.spatiu-listItem{
+    width: 400px;
+    height: 500px;
 
-.lista-spatii ul li section:nth-child(1){
-    width: 100%;
-    height: 50%;
-
-    background-image: url("../img/s/s1.jpg");
+    background-image: linear-gradient(180deg, rgba(20, 20, 20, .25) 110px, rgba(20, 20, 20, 1)), url("../img/s/s1.jpg");
     background-size: cover;
     background-position: center;
-}
 
-.lista-spatii ul li section:nth-child(2){
-    height: 50%;
+    border-radius: 5px;
 
     display: flex;
     flex-direction: column;
+    justify-content:flex-end;
+
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-.lista-spatii ul li div {
+.spatiu-listItem section{
+    padding: 10px;
+}
+
+.spatiu-listItem div {
     display: flex;
     gap: 10px;
-
-    padding: 0px 10px;
-    padding-top: 10px;
 }
 
-.lista-spatii ul li div h1{
+.spatiu-listItem div h1{
     color: white;
     text-transform: capitalize;
 
-    justify-self: start;
     font-size: 30px;
+    padding-right: 40px;
 }
 
-.lista-spatii ul li div i{
-    font-size: 30px;
-
-    color: white;
-    text-transform: capitalize;
-}
-
-.lista-spatii ul li p{
+.spatiu-listItem p{
     color: rgba(255, 255, 255, 0.75);
     font-weight: 300;
     font-size: var(--global-p-size);
-
-    padding: 0px 10px;
 }
 
-.lista-spatii ul li a{
+.spatiu-listItem a{
     text-decoration: none;
     color: white;
 
     background-color: var(--secondary-color);
 
-    margin-top: auto;
-    justify-self: end;
-    bottom: 0px;
     text-align: center;
-
     text-transform: uppercase;
 
     padding: 10px 20px;
+
     border-radius: 5px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 }
 
 @media only screen and (max-width: 768px){
+
+    .filtre{
+        padding: 10px 0px;
+    }
+
+    .filtre p{
+        font-size: var(--global-p-size-phone);
+    }
 
     .lista-spatii{
         padding: 10px 0px;
@@ -143,4 +134,18 @@ body{
         width: 100%;
         height: 400px;
     }
+
+    .lista-spatii ul li div h1{
+        font-size: 30px;
+        padding-right: 20px;
+    }
+    
+    .lista-spatii ul li div i{
+        font-size: 30px;
+    }
+    
+    .lista-spatii ul li p{
+        font-size: var(--global-p-size-phone);
+    }
+    
 }
