@@ -7,15 +7,17 @@ function ElementFromHtml(html){
     return template.content.firstElementChild;
 }
 
+GenerateList()
+function GenerateList(){
 const ul = document.querySelector(".lista-spatii ul");
 fetch('spatii.xlsx')
   .then(response => response.blob())
   .then(blob => readXlsxFile(blob))
   .then((rows) => {
     for(let i = 1; i < rows.length; i++){
-        const filter = 'mamaia';
+        const filter = rows[i][2];
 
-        const imageURL = '../img/s/s2.jpg';
+        const imageURL = rows[i][4];
         const strada = rows[i][0];
         const numar = rows[i][1];
         const detaliiii = rows[i][3];
@@ -44,7 +46,7 @@ fetch('spatii.xlsx')
 
     }
   })
-
+}
 
 /*
 const numOfDivs = 10;
@@ -81,8 +83,6 @@ for(let i = 0; i < numOfDivs; i++){
 setTimeout(test, 1000)
 function test(){
     const imgItem = document.querySelectorAll(".lista-spatii ul li");
-    alert(imgItem.length);
-
     const liItem = document.querySelectorAll(".filtre p");
 
     liItem.forEach(li => {
@@ -91,6 +91,7 @@ function test(){
         liItem.forEach(li => {
             li.className = "";
         })
+
         li.className = "selected";
 
         const value= li.textContent;
@@ -105,3 +106,11 @@ function test(){
     }
 })
 }
+
+function resetAllFilters(){
+    imgItem.forEach(img => {
+        img.style.display = "block";
+    })
+}
+
+
