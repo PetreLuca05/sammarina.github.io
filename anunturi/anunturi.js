@@ -10,29 +10,32 @@ function ElementFromHtml(html){
 GenerateList()
 function GenerateList(){
 const ul = document.querySelector(".lista-spatii ul");
-fetch('spatii.xlsx')
+fetch('slistasortate.xlsx')
   .then(response => response.blob())
   .then(blob => readXlsxFile(blob))
   .then((rows) => {
     for(let i = 1; i < rows.length; i++){
-        const filter = rows[i][2];
+        
+        const filter = rows[i][0];
+        const strada = rows[i][1];
+        const detaliiii = rows[i][4];
+        const mp = rows[i][2];
+        const imageURL = rows[i][6];
 
-        const imageURL = rows[i][5];
-        const strada = rows[i][0];
-        const numar = rows[i][1];
-        const detaliiii = rows[i][3];
-    
+        if(filter != null){
+
         const myList = ElementFromHtml(`
 
         <li data-filter = "${filter}" class="spatiu-listItem" 
-        style = " background-image: linear-gradient(180deg, rgba(20, 20, 20, .25) 50px, rgba(20, 20, 20, 1)), url(${imageURL});">
+        style = " background-image: linear-gradient(180deg, rgba(20, 20, 20, 0) 50px, rgba(20, 20, 20, 1)), url(${imageURL});">
         
           <section>
             <div>
-                <h1>strada ${strada}, numarul ${numar} <i class="fa-solid fa-location-dot"></i></h1>
+                <h1>${strada} <i class="fa-solid fa-location-dot"></i></h1>
             </div>
 
             <p>${detaliiii}</p>
+            <p>${mp}MP</p>
           </section>
 
           <a href="">vizualizeaza</a>
@@ -41,6 +44,7 @@ fetch('spatii.xlsx')
         `)
     
         ul.appendChild(myList);
+        }
 
     }
   })
