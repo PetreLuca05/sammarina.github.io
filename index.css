@@ -53,11 +53,11 @@ header section{
     display: grid;
     grid-template-columns:repeat(3, auto);
     grid-template-rows:repeat(3, auto);
-    gap: 10px;
+    gap: 5px;
 
     box-sizing: border-box;
 
-    padding: 25px;
+    padding: 5px;
 }
 
 .unu div{
