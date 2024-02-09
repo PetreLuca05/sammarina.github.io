@@ -46,6 +46,8 @@
     font-size: 18px;
     font-weight: 300;
     padding-bottom: 20px;
+    padding-right: 20px;
+    line-break:loose;
 }
 
 .master div h3 i{
