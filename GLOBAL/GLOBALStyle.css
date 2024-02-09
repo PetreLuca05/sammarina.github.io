@@ -13,13 +13,6 @@
     user-select: none;
 
     scroll-behavior: smooth;
-
-    --secondary-color: rgba(95, 184, 102, 1);
-
-
-    --global-p-size: 20px;
-
-    --gloabal-p-size-phone: 15px;
 }
 
 html{
@@ -29,44 +22,60 @@ html{
 
 nav{
     width: 100%;
-    height: 50px;
-
     position: fixed;
+
+    background-color: rgb(21, 21, 21);
+
+    padding: 5px 45px;
+    box-sizing: border-box;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    background-color: rgba(25, 25, 25, 1);
-}
+    border-bottom: solid 1px rgba(255, 255, 255, 0.50);
 
-nav section{
-    color: white;
-    text-transform: uppercase;
-    padding-left: 25px;
-    font-family: "Abhaya Libre",sans-serif;
-    font-size: 30px;
-}
-
-nav div{
-    margin-right: 25px;
-    display: flex;
-    align-items: center;
-    gap: 35px;
+    z-index: 9999;
 }
 
 nav a{
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+nav a:hover{
+    color: rgba(255, 255, 255, 1);
+}
+
+nav section:nth-child(1) i{
+    font-size: 25px;
+    background-color: transparent;
     color: white;
+}
+
+nav i{
+    width: 30px;
+    padding: 6px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    border-radius: 50%;
+
+    color: black;
+    background-color: white;
+
     text-decoration: none;
 
-    text-transform: capitalize;
+    cursor: pointer;
 }
 
-nav a i{
-    padding-left: 5px;
-}
+nav section:nth-child(2){
+    display: flex;
+    gap: 30px;
 
-@media only screen and (max-width: 768px){
-    nav{
-        display: none;
-    }
+    align-items: center;
 }

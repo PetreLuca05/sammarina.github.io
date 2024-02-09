@@ -1,0 +1,124 @@
+
+.master{
+    width: 100%;
+    height: 100dvh;
+    
+    background-image: linear-gradient(-215deg, rgba(16, 97, 23, .95), rgba(14, 14, 14, .98) 75%) ,url("../img/bg/bg1.jpg");
+
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 0px 200px;
+    padding-top: 175px;
+    box-sizing: border-box;
+}
+
+.master div{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.master div h1{
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    font-size: 80px;
+    font-family: "Abhaya Libre", sans-serif;
+    line-height: 60px;
+}
+
+.master div h2{
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+
+.master div h3{
+    color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+.master div h3 i{
+    color: rgba(255, 255, 255, 1);
+}
+
+.master div input{
+    height: 30px;
+    border-radius: 0px;
+    margin-bottom: 20px;
+
+    padding: 5px;
+    box-sizing: border-box;
+
+    background-color: rgba(0, 0, 0, 0.382);
+    color: white;
+}
+
+.master div input:nth-child(11){
+    height: 250px;
+}
+
+.master div p{
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.master div p b{
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+@media (max-width: 900px){
+    nav{
+        display: none;
+    }
+
+    .master{
+        width: 100%;
+        height: max-content;
+    
+        display: block;
+    
+        padding: 25px;
+        padding-bottom: 200px;
+        box-sizing: border-box;
+    }
+
+    .master div{
+        width: 100%;
+        height: min-content;
+        box-sizing: border-box;
+    }
+
+    .master div h1{
+        color: white;
+        text-transform: uppercase;
+        padding-bottom: 30px;
+        font-size: 60px;
+        font-family: "Abhaya Libre", sans-serif;
+        line-height: 50px;
+    }
+    
+    .master div h3{
+        color: rgba(255, 255, 255, 0.75);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 18px;
+        font-weight: 300;
+        padding-bottom: 20px;
+        line-break: anywhere;
+    }
+}

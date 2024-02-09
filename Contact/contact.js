@@ -40,8 +40,7 @@ fetch(spatiiRef)
         ul.appendChild(myList);
       }
 
-      //document.querySelector(".spatiiCount b").textContent = rows.length;
-      document.querySelector(".spatiiCount2 b").textContent = rows.length - 1;
+      document.querySelector(".spatiiCount b").textContent = rows.length;
   }
 })
 }
