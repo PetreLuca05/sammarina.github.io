@@ -1,7 +1,11 @@
 
+nav ul li:nth-child(2){
+    display: none
+}
+
 .master{
     width: 100%;
-    height: 100dvh;
+    height: 85dvh;
     
     background-image: linear-gradient(-215deg, rgba(16, 97, 23, .95), rgba(14, 14, 14, .98) 75%) ,url("../img/bg/bg1.jpg");
 
@@ -66,7 +70,7 @@
     color: white;
 }
 
-.master div input:nth-child(11){
+.master div input:nth-child(9){
     height: 250px;
 }
 

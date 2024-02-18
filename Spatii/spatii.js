@@ -1,7 +1,7 @@
 
-const spatiiRef = 'lista-spatii.xlsx';
+const spatiiRef = '../lista-spatii.xlsx';
 const spatiiList = ".spatii";
-const maxItems = 8;
+const maxItems = 19;
 
 function ElementFromHtml(html){
   const template = document.createElement("template");
@@ -20,7 +20,7 @@ fetch(spatiiRef)
 .then(blob => readXlsxFile(blob))
 .then((rows) => {
 
-  for(let i = 1; i < maxItems + 1; i++){
+  for(let i = 1; i < rows.length + 1; i++){
       
       const filter = rows[i][0];
       const strada = rows[i][1];
@@ -31,7 +31,7 @@ fetch(spatiiRef)
       if(filter != null){
         const myList = ElementFromHtml(`
         <div style="background-image: 
-              linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url(${imageURL});">
+              linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url(../${imageURL});">
           <h1><i class="fa-solid fa-location-dot"></i> ${strada}</h1>
           <h2>${detalii} | ${mp}mp</h2>
         </div> 
@@ -40,8 +40,12 @@ fetch(spatiiRef)
         ul.appendChild(myList);
       }
 
-      document.querySelector(".spatiiCount b").textContent = rows.length;
+      //document.querySelector(".spatiiCount b").textContent = rows.length;
+      //document.querySelector(".spatiiCount2 b").textContent = rows.length - 1;
   }
 })
 }
 
+function HomeBtn(){
+  window.open("index.html", '_self');
+}
