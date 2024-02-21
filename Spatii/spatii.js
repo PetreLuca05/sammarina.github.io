@@ -30,7 +30,7 @@ fetch(spatiiRef)
 
       if(filter != null){
         const myList = ElementFromHtml(`
-        <div style="background-image: 
+        <div data-filter = "${filter}" style="background-image: 
               linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url(../${imageURL});">
           <h1><i class="fa-solid fa-location-dot"></i> ${strada}</h1>
           <h2>${detalii} | ${mp}mp</h2>
@@ -46,6 +46,45 @@ fetch(spatiiRef)
 })
 }
 
-function HomeBtn(){
-  window.open("index.html", '_self');
+setTimeout(test, 1000)
+function test(){
+  const imgItem = document.querySelectorAll("nav ul li p");
+  const liItem = document.querySelectorAll(".spatii div");
+
+    imgItem.forEach(p => {
+    p.onclick = function() {
+        //active
+        imgItem.forEach(p => {
+            p.id = "";
+        })
+
+        p.id = "selected";
+
+
+        const value= p.textContent;
+        liItem.forEach(img => {
+            img.style.display = "none";
+            //console.log(value);
+    
+            if(img.getAttribute("data-filter") == value.toLocaleLowerCase()){
+                img.style.display = "flex";
+            }
+        })
+
+    }
+
+    imgItem[0].onclick = function(){
+
+        imgItem.forEach(p => {
+          p.id = "";
+        })
+
+        imgItem[0].id = "selected";
+
+        liItem.forEach(img => {
+            img.style.display = "flex";
+        })
+    }
+})
 }
+

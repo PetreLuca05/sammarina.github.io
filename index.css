@@ -1,4 +1,8 @@
 
+nav ul li:nth-child(1){
+    padding: 0px 45px;
+    height: 40px;
+}
 
 nav ul li:nth-child(2){
     display: none
@@ -213,10 +217,6 @@ nav ul li:nth-child(2){
 }
 
 @media (max-width: 900px){
-    nav{
-        display: none;
-    }
-
     .intro{
         height: 80vh;
     }
